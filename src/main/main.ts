@@ -201,6 +201,30 @@ ipcMain.on('app_version', (event) => {
 //   console.log("Leaving and restarting")
 // })
 
+autoUpdater.on('checking-for-update', () => {
+  log.info('Cheking for update...');
+})
+
+autoUpdater.on('update-available', () => {
+  log.info('Update available');
+})
+
+autoUpdater.on('update-not-available', () => {
+  log.info('Update not available');
+})
+
+autoUpdater.on('error', (err) => {
+  log.info(`Error in auto-update. ${  err}`);
+})
+
+autoUpdater.on('update-downloaded', (info) => {
+  log.info(`update-downloaded`);
+})
+
+autoUpdater.on('download-progress', (progressTrack) => {
+  log.info('download-progress')
+  log.info(progressTrack);
+})
 
 ipcMain.on('log', (e, [type, data]) => {
   log[type as 'info' | 'error'](data);
@@ -262,6 +286,8 @@ if (!gotTheLock) {
       tray = new Tray(
         nativeTrayIcon
       );
+
+      autoUpdater.checkForUpdatesAndNotify();
 
       const trayContextMenu = Menu.buildFromTemplate([
         {

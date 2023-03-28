@@ -19,7 +19,7 @@
     "build:renderer": "cross-env NODE_ENV=production TS_NODE_TRANSPILE_ONLY=true webpack --config ./.erb/configs/webpack.config.renderer.prod.ts",
     "postinstall": "ts-node .erb/scripts/check-native-dep.js && electron-builder install-app-deps && cross-env NODE_ENV=development TS_NODE_TRANSPILE_ONLY=true webpack --config ./.erb/configs/webpack.config.renderer.dev.dll.ts",
     "lint": "cross-env NODE_ENV=development eslint . --ext .js,.jsx,.ts,.tsx",
-    "package": "ts-node ./.erb/scripts/clean.js dist && yarn build && electron-builder build --publish never",
+    "package": "ts-node ./.erb/scripts/clean.js dist && yarn build && electron-builder build -p always",
     "prepare": "husky install",
     "rebuild": "electron-rebuild --parallel --types prod,dev,optional --module-dir release/app",
     "start": "ts-node ./.erb/scripts/check-port-in-use.js && yarn start:renderer",
@@ -179,16 +179,12 @@
     "webpack-dev-server": "^4.10.0",
     "webpack-merge": "^5.8.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://gitlab.fstorage.vn/fstorage-tool/fstorage-mount-tool-v2.git"
-  },
-
   "build": {
     "publish": {
       "provider": "github",
       "owner": "dhngan19",
-      "repo": "fstorage-mount-tool-v2"
+      "repo": "fstorage-mount-tool-v2",
+      "token": "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"
     },
     "productName": "Fstorage mount tool",
     "copyright": "Copyright (C) 2022 FTIDNS",
