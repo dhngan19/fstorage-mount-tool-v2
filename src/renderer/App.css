@@ -1,0 +1,240 @@
+/*
+ * @NOTE: Prepend a `~` to css file paths that are in your node_modules
+ *        See https://github.com/webpack-contrib/sass-loader#imports
+ */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* position: relative; */
+  color: white;
+  height: 100vh;
+  /* background: linear-gradient(
+    200.96deg,
+    #fedc2a -29.09%,
+    #dd5789 51.77%,
+    #7a2c9e 129.35%
+  ); */
+  overflow-y: hidden;
+  overflow-x: hidden;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+/* button {
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  appearance: none;
+  font-size: 1.3rem;
+  box-shadow: 0px 8px 28px -6px rgba(24, 39, 75, 0.12),
+    0px 18px 88px -4px rgba(24, 39, 75, 0.14);
+  transition: all ease-in 0.1s;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+button:hover {
+  transform: scale(1.05);
+  opacity: 1;
+} */
+
+li {
+  list-style: none;
+}
+
+/* a {
+  text-decoration: none;
+  height: fit-content;
+  width: fit-content;
+  margin: 10px;
+} */
+
+a:hover {
+  opacity: 1;
+  text-decoration: none;
+}
+
+.ant-btn-primary {
+  background-color: #1853c2;
+}
+
+.ldl-ani#ani-01 {
+  transform: rotate(0deg);
+  transform-origin: 50px 50px;
+  animation: 2s linear -1.5s infinite normal forwards running tick-4231dd04-c80d-43cf-9c86-12edb587239d;
+}
+
+.ldl-ani#ani-02 {
+  transform: rotate(0deg);
+  transform-origin: 50px 50px;
+  animation: 2s linear -2s infinite normal forwards running tick-4231dd04-c80d-43cf-9c86-12edb587239d;
+}
+
+.ldl-scale {
+  transform-origin: 50% 50%;
+  transform: rotate(0deg) scale(0.6, 0.6);
+}
+
+@keyframes tick-4231dd04-c80d-43cf-9c86-12edb587239d {
+  0% {
+    animation-timing-function: cubic-bezier(0.1858, 0.2841, 0.5834, 1.4615);
+    transform: rotate(0deg);
+  }
+
+  31% {
+    animation-timing-function: cubic-bezier(0.0467, 0.1102, 0.4803, 1.4719);
+    transform: rotate(13.540000000000001deg);
+  }
+
+  41% {
+    animation-timing-function: cubic-bezier(0.0469, 0.1108, 0.4775, 1.4732);
+    transform: rotate(-9.48deg);
+  }
+
+  51% {
+    animation-timing-function: cubic-bezier(0.0478, 0.1131, 0.4723, 1.4819);
+    transform: rotate(6.640000000000001deg);
+  }
+
+  61% {
+    animation-timing-function: cubic-bezier(0.0506, 0.1192, 0.4639, 1.4818);
+    transform: rotate(-4.640000000000001deg);
+  }
+
+  71% {
+    animation-timing-function: cubic-bezier(0.0581, 0.1374, 0.457, 1.4901);
+    transform: rotate(3.2600000000000002deg);
+  }
+
+  81% {
+    animation-timing-function: cubic-bezier(0.0765, 0.1813, 0.4542, 1.4923);
+    transform: rotate(-2.2800000000000002deg);
+  }
+
+  91% {
+    animation-timing-function: cubic-bezier(0.1747, 0.3181, 0.341, 0.878);
+    transform: rotate(1.6deg);
+  }
+
+  100% {
+    transform: rotate(-1.6400000000000001deg);
+  }
+}
+
+.custom-ant-breadcrumb li:last-child {
+  display: none;
+}
+.ant-breadcrumb-separator {
+  margin-inline: 4px !important;
+}
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.custom-file-input::before {
+  content: 'Select some files';
+  display: inline-block;
+  background: linear-gradient(top, #f9f9f9, #e3e3e3);
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-weight: 700;
+  font-size: 10pt;
+}
+.custom-file-input:hover::before {
+  border-color: black;
+}
+.custom-file-input:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+.ant-table-wrapper .ant-table-pagination.ant-pagination {
+  margin: 8px 0;
+}
+.ant-tabs-top .ant-tabs-nav {
+  margin-bottom: 7px;
+}
+.ant-table-tbody > tr > td {
+  padding: 4px 8px !important;
+}
+
+.ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item {
+  padding: 0px;
+}
+
+.ant-dropdown .ant-dropdown-menu {
+  padding: 0px;
+}
+
+.process_table .ant-table-tbody .ant-table-cell {
+  vertical-align: baseline;
+}
+.ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: #1853c2;
+  font-weight: 600;
+}
+
+.btn-text:hover {
+  color: #1853c2 !important;
+  background-color: #dff2ff !important;
+}
+
+.ant-pagination .ant-pagination-item-active a {
+  color: #1853c2 !important;
+}
+
+.ant-pagination .ant-pagination-item-active {
+  border-color: #1853c2 !important;
+}
+
+.process_table .ant-table-tbody tr {
+  background-color: #f8f8f8;
+}
+.btn-unmount button {
+  display: flex !important;
+  align-items: center !important;
+}
+.btn-unmount:hover {
+  background-color: #ffe7e7;
+  border-radius: 8px;
+}
+
+.custom-scrollbar .ant-table-body::-webkit-scrollbar {
+  width: 10px;
+}
+
+.custom-scrollbar .ant-table-body::-webkit-scrollbar-thumb {
+  background-color: #ebecef;
+  border-radius: 10px;
+  border: 2px solid #fff;
+}
+
+.custom-scrollbar .ant-table-body::-webkit-scrollbar-track {
+  background-color: #fff;
+  border-radius: 10px;
+}
+#table-fixed-height tbody {
+  height: 200px;
+}
+#table-fixed-height-2 tbody {
+  height: 140px;
+}
+
+.tab-sync .ant-tabs-nav-wrap {
+  width: 120px !important;
+}
+
+.tab-sync .ant-tabs-nav .ant-tabs-tab {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 10px;
+}
